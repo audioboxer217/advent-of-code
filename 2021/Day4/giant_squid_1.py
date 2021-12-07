@@ -27,6 +27,7 @@ with open('input.txt','r') as input_file:
     else:
       board_line = line.split()
       board.append(board_line)
+  bingo_boards.append(np.array(board))
 
 for called_num in bingo_nums:
   for board in bingo_boards:
