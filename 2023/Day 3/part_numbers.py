@@ -8,7 +8,7 @@ with open("input.txt", "r") as input:
         board.append([*line.strip()])
         for char in re.finditer(r"[^0-9.\n]", line):
             char_locs.append((line_idx, char.start()))
-        for num in re.finditer(f"\d+", line):
+        for num in re.finditer(r"\d+", line):
             surrounding_square = {
                 (r, c)
                 for r in (line_idx - 1, line_idx, line_idx + 1)
