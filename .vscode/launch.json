@@ -6,18 +6,14 @@
   "configurations": [
     {
       "name": "Python: Current File",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
-      "cwd": "${fileDirname}"
-    },
-    {
-      "name": "PowerShell: Launch Current File",
-      "type": "PowerShell",
-      "request": "launch",
-      "script": "${file}",
-      "cwd": "${file}"
+      "cwd": "${fileDirname}",
+      "env": {
+        "DEBUG": "True"
+      }
     }
   ]
 }
